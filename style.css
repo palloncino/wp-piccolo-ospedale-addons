@@ -1,0 +1,114 @@
+/* - - - - - - - - - - */
+/* Sticky_Content_001  */
+/* - - - - - - - - - - */
+
+.side-button-outer {
+  transition: all 0.2s ease;
+}
+
+.side-button-outer:hover {
+  transform: scale(.95);
+}
+
+.side-button-inner {
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: .4rem;
+  padding: .4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #e9e9e9;
+  height: 100%;
+  cursor: pointer;
+}
+
+.selected-button .side-button-inner {
+  border: 2px solid #1E3050 !important;
+}
+
+.selected-button .side-button-text {
+  background: white;
+}
+
+.side-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 0.2s ease;
+  transition-delay: .1s;
+  transform: rotate(90deg) scale(1.1) translateY(7%);
+}
+
+.side-button-text {
+  flex: 4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  transition: .2s;
+  border-radius: .2rem;
+}
+
+.side-button-text-icon-container {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  min-width: 72px;
+  justify-content: center;
+  align-items: center;
+  transition-delay: .1s;
+}
+
+.side-button-text-icon-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-button-text-text-container {
+  line-height: 1.4rem;
+  transition: .2s;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: 500;
+  padding: .2rem .4rem;
+}
+
+.clickOut {
+  animation: clickOut .2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.side-button-inner:hover .side-button-text {
+  background: #fff;
+  transition: .2s;
+}
+
+.side-button-outer:hover .side-button-text-text-container {
+  transition: .2s;
+  box-sizing: border-box;
+  border-radius: .4rem;
+}
+
+.side-button-outer:not(:last-child) {
+  margin-bottom: .4rem;
+}
+
+@keyframes clickOut {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}
